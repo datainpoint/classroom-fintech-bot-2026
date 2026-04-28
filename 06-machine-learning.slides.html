@@ -7456,11 +7456,11 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="%E7%9B%AE%E9%8C%84">目錄<a class="anchor-link" href="#%E7%9B%AE%E9%8C%84">¶</a></h2><ul>
 <li>分類模型（P.3）</li>
-<li>集成模型（P.102）</li>
-<li>模型選擇（P.121）</li>
-<li>聚類模型（P.163）</li>
-<li>時間序列模型（P.168）</li>
-<li>隨堂練習（P.184）</li>
+<li>集成模型（P.103）</li>
+<li>模型選擇（P.122）</li>
+<li>聚類模型（P.164）</li>
+<li>時間序列模型（P.169）</li>
+<li>隨堂練習（P.185）</li>
 </ul>
 </div>
 </div>
@@ -7595,7 +7595,7 @@ w^* = \begin{bmatrix} w_0^* \\ w_1^* \end{bmatrix} = \begin{bmatrix} 5 \\ 6 \end
 <li>有無限多組的 $w$ 等著要嘗試。</li>
 <li>「梯度遞減」演算方法就是為電腦程式提供了一個尋找解題的方式。</li>
 </ul>
-<p><img alt="" src="images/0002.png"/></p>
+<p><img alt="" src="0002.png"/></p>
 </div>
 </div>
 </div>
@@ -7772,7 +7772,19 @@ w := w - \alpha \frac{\partial J}{\partial w}
 &amp;= \frac{1}{m}\frac{\partial}{\partial w}(w^TX^TXw - w^TX^Ty - y^TXw + y^Ty) \\
 &amp;= \frac{1}{m}\frac{\partial}{\partial w}(w^TX^TXw - (Xw)^Ty - (Xw)^Ty + y^Ty) \\
 &amp;= \frac{1}{m}\frac{\partial}{\partial w}(w^TX^TXw - 2(Xw)^Ty + y^Ty) \\
-&amp;= \frac{1}{m}(2X^TXw - 2X^Ty) \\
+\end{align}
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%B0%87-$J(w)$-%E9%97%9C%E6%96%BC-$w$-%E7%9A%84%E5%81%8F%E5%BE%AE%E5%88%86%E5%BC%8F%E5%AD%90%E5%B1%95%E9%96%8B">將 $J(w)$ 關於 $w$ 的偏微分式子展開<a class="anchor-link" href="#%E5%B0%87-$J(w)$-%E9%97%9C%E6%96%BC-$w$-%E7%9A%84%E5%81%8F%E5%BE%AE%E5%88%86%E5%BC%8F%E5%AD%90%E5%B1%95%E9%96%8B">¶</a></h2>\begin{align}
+\frac{\partial J}{\partial w} &amp;= \frac{1}{m}(2X^TXw - 2X^Ty) \\
 &amp;= \frac{2}{m}(X^TXw - X^Ty) \\
 &amp;= \frac{2}{m}X^T(Xw - y) \\
 &amp;= \frac{2}{m}X^T(\hat{y} - y)
@@ -12270,6 +12282,267 @@ Is Augmented Dickey-Fuller Test passed: True
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="%E9%9A%A8%E5%A0%82%E7%B7%B4%E7%BF%92">隨堂練習<a class="anchor-link" href="#%E9%9A%A8%E5%A0%82%E7%B7%B4%E7%BF%92">¶</a></h2><p><a href="https://colab.research.google.com/github/datainpoint/classroom-fintech-bot-2026/blob/main/06-exercises.ipynb">https://colab.research.google.com/github/datainpoint/classroom-fintech-bot-2026/blob/main/06-exercises.ipynb</a></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E6%B3%9B%E7%94%A8%E7%9A%84%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E6%8A%80%E5%B7%A7">泛用的機器學習技巧<a class="anchor-link" href="#%E6%B3%9B%E7%94%A8%E7%9A%84%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E6%8A%80%E5%B7%A7">¶</a></h2><ul>
+<li>如何處理過多的資料列數。</li>
+<li>如何處理過多的資料欄數。</li>
+<li>如何處理單位不同的數值特徵。</li>
+<li>如何處理類別變數。</li>
+<li>如何處理資料表關聯。</li>
+<li>如何處理類別不平衡。</li>
+<li>如何評估模型。</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E5%88%97%E6%95%B8">如何處理過多的資料列數<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E5%88%97%E6%95%B8">¶</a></h2><ul>
+<li>讀入部分的資料列數：在 <code>pd.read_csv()</code> 函數中加入 <code>skiprows=[random_indice]</code><ul>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html</a></li>
+</ul>
+</li>
+<li>隨機取樣：使用 <code>df.sample()</code><ul>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8">如何處理過多的資料欄數<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8">¶</a></h2><ul>
+<li>讀入部分的資料欄數：在 <code>pd.read_csv()</code> 函數中加入 <code>usecols=[column_names]</code><ul>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html</a></li>
+</ul>
+</li>
+<li>刪除遺漏值過多的欄位：使用 <code>Series.isnull()</code> 判斷。<ul>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.isnull.html">https://pandas.pydata.org/docs/reference/api/pandas.Series.isnull.html</a></li>
+</ul>
+</li>
+<li>刪除變異數過小的欄位：使用 <code>Series.var()</code> 判斷。<ul>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.var.html">https://pandas.pydata.org/docs/reference/api/pandas.Series.var.html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8%EF%BC%88%E7%BA%8C%EF%BC%89">如何處理過多的資料欄數（續）<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8%EF%BC%88%E7%BA%8C%EF%BC%89">¶</a></h2><ul>
+<li>刪除相關係數接近 0 的欄位：<code>Series.corr()</code>; <code>DataFrame.corr()</code><ul>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.corr.html">https://pandas.pydata.org/docs/reference/api/pandas.Series.corr.html</a></li>
+<li><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html</a></li>
+</ul>
+</li>
+<li>獲取特徵重要性：<code>RandomForestClassifier/Regressor</code>; <code>GradientBoostingClassifier/Regressor</code><ul>
+<li><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html">https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html</a></li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html</a></li>
+</ul>
+</li>
+<li>降維：<a href="https://scikit-learn.org/stable/api/sklearn.decomposition.html">https://scikit-learn.org/stable/api/sklearn.decomposition.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8%EF%BC%88%E7%BA%8C%EF%BC%89">如何處理過多的資料欄數（續）<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8%EF%BC%88%E7%BA%8C%EF%BC%89">¶</a></h2><ul>
+<li>回歸正規化</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Class Name</th>
+<th style="text-align:left">Regularization parameter</th>
+<th style="text-align:left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Ridge</td>
+<td style="text-align:left">alpha</td>
+<td style="text-align:left">Larger alpha = Stronger regularization.</td>
+</tr>
+<tr>
+<td style="text-align:left">Lasso</td>
+<td style="text-align:left">alpha</td>
+<td style="text-align:left">Larger alpha = Stronger regularization.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8%EF%BC%88%E7%BA%8C%EF%BC%89">如何處理過多的資料欄數（續）<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%81%8E%E5%A4%9A%E7%9A%84%E8%B3%87%E6%96%99%E6%AC%84%E6%95%B8%EF%BC%88%E7%BA%8C%EF%BC%89">¶</a></h2><ul>
+<li>分類器正規化</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Classifier</th>
+<th style="text-align:left">Regularization Parameter</th>
+<th style="text-align:left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>LogisticRegression</code></td>
+<td style="text-align:left">C (Inverse strength)</td>
+<td style="text-align:left">Smaller C = Stronger regularization.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>RidgeClassifier</code></td>
+<td style="text-align:left">alpha</td>
+<td style="text-align:left">Larger alpha = Stronger regularization.</td>
+</tr>
+<tr>
+<td style="text-align:left">SVC / LinearSVC</td>
+<td style="text-align:left">C (Inverse strength)</td>
+<td style="text-align:left">Smaller C = Stronger regularization.</td>
+</tr>
+<tr>
+<td style="text-align:left">SGDClassifier</td>
+<td style="text-align:left">alpha &amp; penalty</td>
+<td style="text-align:left">Larger alpha = Stronger regularization; penalty can be set to 'l1', 'l2', or 'elasticnet'.</td>
+</tr>
+<tr>
+<td style="text-align:left">MLPClassifier</td>
+<td style="text-align:left">alpha</td>
+<td style="text-align:left">Larger alpha = Stronger regularization.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E5%96%AE%E4%BD%8D%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B8%E5%80%BC%E7%89%B9%E5%BE%B5">如何處理單位不同的數值特徵<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E5%96%AE%E4%BD%8D%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B8%E5%80%BC%E7%89%B9%E5%BE%B5">¶</a></h2><ul>
+<li>標準化：<ul>
+<li><code>StandardScaler</code>:<a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html">https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html</a></li>
+<li><code>MinMaxScaler</code>:<a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html">https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%A1%9E%E5%88%A5%E8%AE%8A%E6%95%B8">如何處理類別變數<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%A1%9E%E5%88%A5%E8%AE%8A%E6%95%B8">¶</a></h2><ul>
+<li>編碼轉換：<ul>
+<li><code>pd.get_dummies()</code>: <a href="https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html">https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html</a></li>
+<li><code>LabelEncoder</code>: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html">https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html</a></li>
+<li><code>OneHotEncoder</code>: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html">https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html</a></li>
+<li><code>OrdinalEncoder</code>: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html">https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E8%B3%87%E6%96%99%E8%A1%A8%E9%97%9C%E8%81%AF">如何處理資料表關聯<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E8%B3%87%E6%96%99%E8%A1%A8%E9%97%9C%E8%81%AF">¶</a></h2><ul>
+<li><code>pd.concat()</code>: <a href="https://pandas.pydata.org/docs/reference/api/pandas.concat.html">https://pandas.pydata.org/docs/reference/api/pandas.concat.html</a></li>
+<li><code>pd.merge()</code>: <a href="https://pandas.pydata.org/docs/reference/api/pandas.merge.html">https://pandas.pydata.org/docs/reference/api/pandas.merge.html</a></li>
+<li><code>df.join()</code>: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%A1%9E%E5%88%A5%E4%B8%8D%E5%B9%B3%E8%A1%A1">如何處理類別不平衡<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E9%A1%9E%E5%88%A5%E4%B8%8D%E5%B9%B3%E8%A1%A1">¶</a></h2><ul>
+<li>Oversampling：增加少數類的樣本，SMOTE (Synthetic Minority Over-sampling Technique) <code>from imblearn.over_sampling import SMOTE</code><ul>
+<li><a href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html">https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html</a></li>
+</ul>
+</li>
+<li>讓模型在計算損失時，對少數類更敏感，<code>sklearn</code> 多數分類器都有參數 <code>class_weight='balanced'</code><ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%E5%A6%82%E4%BD%95%E8%A9%95%E4%BC%B0%E6%A8%A1%E5%9E%8B">如何評估模型<a class="anchor-link" href="#%E5%A6%82%E4%BD%95%E8%A9%95%E4%BC%B0%E6%A8%A1%E5%9E%8B">¶</a></h2><ul>
+<li><code>sklearn.metrics</code><ul>
+<li><a href="https://scikit-learn.org/stable/api/sklearn.metrics.html">https://scikit-learn.org/stable/api/sklearn.metrics.html</a></li>
+</ul>
+</li>
+<li>Baseline Model<ul>
+<li>回歸：用 <code>y</code> 的平均值作 $\hat{y}$ 預測。</li>
+<li>分類：用均勻分配作 $\hat{y}$ 預測、用 $y^{(train)}$ 比例作 $\hat{y}$ 預測。</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
